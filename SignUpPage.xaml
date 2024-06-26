@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SipSmart.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+        <Image Source="your_logo.png" HeightRequest="100" HorizontalOptions="CenterAndExpand" />
+
+        <Entry Placeholder="Full Name" x:Name="FullNameEntry" Margin="0,10,0,10" />
+        <Entry Placeholder="Email" x:Name="EmailEntry" Keyboard="Email" Margin="0,0,0,10" />
+        <Entry Placeholder="Password" x:Name="PasswordEntry" IsPassword="True" Margin="0,0,0,10" />
+        <Label Text="Password must be at least 8 characters long and include a number and a special character." TextColor="Red" FontSize="Micro" />
+        <Label Text="Invalid email format." x:Name="EmailValidationLabel" TextColor="Red" FontSize="Micro" IsVisible="False" />
+
+        <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" />
+
+        <Label Text="Already have an account? " />
+        <Button Text="Login" Clicked="OnLoginButtonClicked" />
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

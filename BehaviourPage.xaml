@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SipSmart.BehaviourPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+
+        <Label Text="How often do you consume alcoholic beverages?" />
+        <Picker Title="Select one" x:Name="frequencyPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Rarely</x:String>
+                    <x:String>Occasionally</x:String>
+                    <x:String>Regularly</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="On average, how many standard drinks do you have per drinking session?" />
+        <Picker Title="Select one" x:Name="quantityPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1-2</x:String>
+                    <x:String>3-4</x:String>
+                    <x:String>5 or more</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="In what situations or environments do you usually consume alcohol?" />
+        <Picker Title="Select one" x:Name="contextPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Social gatherings</x:String>
+                    <x:String>Stressful situations</x:String>
+                    <x:String>Celebrations</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="What is the primary reason behind your alcohol consumption?" />
+        <Picker Title="Select one" x:Name="purposePicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Socializing</x:String>
+                    <x:String>Stress relief</x:String>
+                    <x:String>Celebration</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Have you noticed any negative consequences of your alcohol consumption?" />
+        <Picker Title="Select one" x:Name="impactPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Yes</x:String>
+                    <x:String>No</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="Submit" Clicked="OnSubmitClicked" />
+
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

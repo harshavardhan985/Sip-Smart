@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SipSmart.GoalPage">
+    <ContentPage.Content>
+        <StackLayout>
+        <Label Text="Set Your Alcohol Consumption Goals"
+               FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+
+        <Label Text="Frequency per Week"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+        <Slider x:Name="frequencySlider"
+                Maximum="7"
+                Minimum="0"
+                Value="0"
+                Margin="20,0,20,20" />
+
+        <Label Text="Quantity per Week"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+        <Slider x:Name="quantitySlider"
+                Maximum="10"
+                Minimum="0"
+                Value="0"
+                Margin="20,0,20,20" />
+
+        <Label Text="Preferred BAC Level"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+        <Slider x:Name="bacSlider"
+                Maximum="0.2"
+                Minimum="0"
+                Value="0"
+                Margin="20,0,20,20" />
+
+        <Label Text="Timeline for Goals"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+        <Picker x:Name="timelinePicker"
+                Title="Select Timeline"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+            <Picker.Items>
+                <x:String>One Month</x:String>
+                <x:String>Three Months</x:String>
+                <x:String>Six Months</x:String>
+                <x:String>One Year</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Challenging Days or Occasions"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+        <!-- Add more checkboxes as needed -->
+
+            <CheckBox x:Name="challengingDaysCheckbox" Margin="20,0,20,10">
+               
+                </CheckBox>
+
+        <CheckBox x:Name="socialEventsCheckbox" Margin="20,0,20,10"/>
+
+        <Button Text="Save Goals"
+                Clicked="OnSaveClicked"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+
